@@ -1,0 +1,19 @@
+h1, p {
+  font-family: Lato;
+}
+
+body {
+  overflow: hidden;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin: -8px;
+  padding: 0;
+}
+
+.video{
+  transform: scaleX(-1);
+  position: absolute;
+}
