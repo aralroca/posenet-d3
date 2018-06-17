@@ -12,7 +12,8 @@ const initialPosition = 40;
 
 export default class PoseNet extends Component {
   state = {
-    poses: [],
+    poses: {},
+    loading: true,
   }
 
   componentDidMount =  async () =>{
@@ -83,6 +84,7 @@ export default class PoseNet extends Component {
       .estimateSinglePose(this.video, imageScaleFactor, flipHorizontal, outputStride)
 
     if(poses.keypoints) this.setState({ 
+      loading: false,
       poses: poses.keypoints
               .reduce((obj, point) => ({ ...obj, 
                 [point.part]: point
@@ -99,7 +101,7 @@ export default class PoseNet extends Component {
     return (
       <div>
         <video className="video" playsInline ref={this.setRef} />
-        {this.props.children(this.state.poses)}
+        {this.props.children(this.state)}
       </div>
     );
   }

@@ -76,11 +76,14 @@ class App extends Component {
     return (
       <PoseNet videoSize={videoSize}>
       {
-        poses => (
-          <SVGGraph 
-            graph={this.getGraph(poses)} 
-          />
-        )
+        ({ poses, loading }) => (
+          loading 
+          ? 'Loading...'
+          : (
+            <SVGGraph 
+              graph={this.getGraph(poses)} 
+            />
+          ))
       }
       </PoseNet>
       

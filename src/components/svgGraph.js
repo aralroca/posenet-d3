@@ -51,24 +51,24 @@ export default class SVGGraph extends Component {
       .attr('r', d => d.r)
       .attr('fill', '#1565c0');
 
-    const link = this.svg.append('g')
+  /*  const link = this.svg.append('g')
       .selectAll('line')
       .data(links)
       .enter()
       .append('line')
       .attr('stroke', '#1565c0')
-      .attr('stroke-width', 5)
+      .attr('stroke-width', 5)*/
 
    const simulation = d3.forceSimulation()
       .force('link', d3.forceLink().id(d => d.id))  
       .force('center', d3.forceCenter(width / 2, height / 2));
 
     const ticked = () => {
-      link
+      /*link
         .attr('x1', d => d.source.x)
         .attr('y1', d => d.source.y)
         .attr('x2', d => d.target.x)
-        .attr('y2', d => d.target.y);
+        .attr('y2', d => d.target.y);*/
       node
         .attr('transform', d => `translate(${d.x}, ${d.y})`);
       }
@@ -77,9 +77,9 @@ export default class SVGGraph extends Component {
       .nodes(nodes)
       .on('tick', ticked)
 
-    simulation
+   /* simulation
       .force('link')
-      .links(links);
+      .links(links);*/
   }
 
   render() {
