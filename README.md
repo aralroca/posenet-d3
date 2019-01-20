@@ -4,14 +4,17 @@ This project is using the posenet model to predict from the camara the human pos
 
 ![demo](https://aralroca.files.wordpress.com/2018/08/posenet.gif?w=960)
 
+## Getting started
+
+* > npm install
+* > npm start
+
 ## Technologies
 
 * TensorFlow.js
 * posenet
 * d3
 * React.js
-
-
 
 ## Learn more: 
 * https://aralroca.com/2018/08/24/first-steps-with-tensorflow-js/
