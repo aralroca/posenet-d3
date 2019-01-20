@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/edit/posenet-d3/precache-manifest.c7fbb481d0c50e17b2016d126370f9ae.js"
+  "/posenet-d3/precache-manifest.9c6558e21d9853efd5fad52e7257d19c.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/edit/posenet-d3/index.html", {
+workbox.routing.registerNavigationRoute("/posenet-d3/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
