@@ -1,7 +1,7 @@
 {
   "name": "posenet-d3",
   "description": "",
-  "homepage": "https://stackblitz.com/edit/posenet-d3",
+  "homepage": "https://aralroca.github.io/posenet-d3/",
   "dependencies": {
     "react": "16.7.0",
     "react-dom": "16.7.0",
